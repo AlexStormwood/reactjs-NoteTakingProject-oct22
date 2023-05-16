@@ -10,9 +10,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 	<BrowserRouter>
+	{/* App as parent to Notes = App has no access to Notes data */}
+	{/* <App>
+		<NotesProvider /> 
+	</App> */}
 		<NotesProvider>
 			<App />
-		</NotesProvider>
+		</NotesProvider>	
 	</BrowserRouter>
     
   </React.StrictMode>
