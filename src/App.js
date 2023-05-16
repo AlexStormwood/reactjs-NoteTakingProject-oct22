@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+		<Route path="/" element={<h1>TODO</h1>} />
+		<Route path="/notes" element={<h1>TODO</h1>} />
+		<Route path="/notes/:noteID" element={<h1>TODO</h1>} />
+		<Route path="/notes/:noteID/edit" element={<h1>TODO</h1>} />
+		<Route path="/notes/searchByWord/:word" element={<h1>TODO</h1>} />
+		<Route path="/notes/sort/duedate" element={<h1>TODO</h1>} />
+		<Route path="/notes/sort/createddate" element={<h1>TODO</h1>} />
+		<Route path="/notes/filter/overdue" element={<h1>TODO</h1>} />
+		<Route path="/notes/filter/done" element={<h1>TODO</h1>} />
+
+	  </Routes>
     </div>
   );
 }
