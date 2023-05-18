@@ -30,7 +30,8 @@ const notesReducer = (previousState, instructions) => {
 			console.log("Apply persistent data to state now.");
 
 			// instructions.data is provided when the dispatch function is called
-			stateEditable = instructions.data;
+			let localStorageData = instructions.data;
+			stateEditable = localStorageData;
 
 			// Whatever is returned is now the newest version of state 
 			return stateEditable;
