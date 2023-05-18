@@ -7,7 +7,7 @@
 
 - [x] Fix bug with context & localstorage
 - [ ] Work on essential homepage features
-- [ ] Fix Netlify deployment re: React Router 
+- [x] Fix Netlify deployment re: React Router 
 
 ### Saturday
 
