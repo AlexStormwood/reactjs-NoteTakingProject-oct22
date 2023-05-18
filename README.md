@@ -1,5 +1,20 @@
 # Note Taking React App
 
+
+## Day Plan
+
+### Thursday
+
+- [x] Fix bug with context & localstorage
+- [] Work on essential homepage features
+- [] Fix Netlify deployment re: React Router 
+
+### Saturday
+
+- Work through the "Nicer to Haves"
+- Work on CSS Styling
+
+
 ## General Plan 
 - Note taking app 
 	- store notes in local storage 
@@ -30,28 +45,41 @@
 	- routing: 
 		- useParams for routes to do things with/to specific notes
 		- routes to do:
+
+Essential stuff:
 			- /
 				- Homepage
-					- List newest note and any notes due within 1 day
-					- Display a count of how many notes exist
-					- Create a note with a form on the page 
+					1. Display a count of how many notes exist
+					2. Create a note with a form on the page 
+					3. List of all notes? 
+		
+Nicer to have:
 			- /notes
-				- List all notes ordered by ID 
+				- Lists all notes from newest to oldest
 			- /notes/:noteID
 				- Show a note 
 			- /notes/:noteID/edit
 				- Show a note edit form 
-			- /notes/searchByWord/:word
-				- List all notes that include :word in title or description 
-			- /notes/sort/duedate
-				- List all notes ordered by "due date"
+			- /
+				- Homepage (extra functionality)
+					- List newest note 
+					- List any notes due within 1 day
+
+Nice to have:
 			- /notes/sort/createddate
 				- List all notes ordered by "created at date"
 			- /notes/filter/overdue
 				- List all notes with a "due date" in the past and with "isCompleted" set to false
 			- /notes/filter/done
 				- List all notes with "isCompleted" set to true
-
+			- /notes/sort/duedate
+				- List all notes ordered by "due date"
+			- /notes
+				- List all notes ordered by ID 
+			
+			- /notes/searchByWord/:word
+				- List all notes that include :word in title or description 
+	
 	- components:
 		- NoteDisplay
 			- Show note data

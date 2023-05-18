@@ -18,16 +18,31 @@ const initialNotesData = [
  * instructions.type determines _how_ we edit the state
  * The reducer must return something, otherwise state is set to null.
  * Whatever is returned, is the new state.
+ * @param instructions Object containing a "type" to be used by the switch, and whatever other property is expected
+ * as per the switch statement that matches the type. 
  * @returns New state, edited based on instructions provided.
  */
 const notesReducer = (previousState, instructions) => {
 	let stateEditable = [...previousState];
 
 	switch (instructions.type){
+		case "setup":
+			console.log("Apply persistent data to state now.");
+
+			// instructions.data is provided when the dispatch function is called
+			stateEditable = instructions.data;
+
+			// Whatever is returned is now the newest version of state 
+			return stateEditable;
+
 		case "create":
 			console.log("TODO: Create note and add to state");
-			// returns SomeNewState; 
-			break;
+
+			let newNote = instructions.newNote;
+			stateEditable.push(newNote);
+
+			return stateEditable; 
+			
 		case "update":
 			console.log("TODO: Update specific note and overwrite it in state");
 			break;
@@ -77,7 +92,7 @@ export default function NotesProvider(props){
 
 	useEffect(() => {
 		// On app start, overwrite notesData with persistentData 
-		// notesDispatch()
+		notesDispatch({type:"setup", data: persistentData});
 	}, []);
 
 	// Dev: confirm that our local storage is updating
