@@ -14,10 +14,16 @@ export default function NoteDisplay(props){
 		// On start, find the note in globalNotesData
 		// that has an ID matching props.id
 		
+		// Block syntax
 		setLocalNote(globalNotesData.find(globalSpecificNote => {
+			//console.log("Some note data");
+
 			return globalSpecificNote.id === id;
 		}));
 		
+		// Alternative, one-liner syntax:
+		// setLocalNote(globalNotesData.find(globalSpecificNote => globalSpecificNote.id === id));
+
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [globalNotesData, id])
