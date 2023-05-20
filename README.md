@@ -6,13 +6,14 @@
 ### Thursday
 
 - [x] Fix bug with context & localstorage
-- [ ] Work on essential homepage features
+- [X] Work on essential homepage features
 - [x] Fix Netlify deployment re: React Router 
 
 ### Saturday
 
-- Work through the "Nicer to Haves"
-- Work on CSS Styling
+[ ] Work through the "Nicer to Haves"
+[ ] Work on CSS Styling
+[ ] Add a "Delete Note" function
 
 
 ## General Plan 

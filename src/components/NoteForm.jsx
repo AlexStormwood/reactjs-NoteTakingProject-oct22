@@ -11,6 +11,7 @@
 
 import { useEffect, useState } from "react";
 import { useNoteData, useNoteDispatch } from "../contexts/NotesContext";
+import Button  from "react-bootstrap/Button";
 
 export default function NoteForm(props){
 	
@@ -101,7 +102,9 @@ export default function NoteForm(props){
 			<input type="text" name="createdAtDate" value={localCreatedAtDate} onChange={setLocalCreatedAtDate} /> */}
 
 			</form>
-			<button onClick={saveNoteToGlobal}>Save Note</button>
+			<Button variant="primary" onClick={saveNoteToGlobal}>
+				Save Note
+			</Button>
 		</div>
 	);
 
