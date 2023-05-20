@@ -37,7 +37,7 @@ const notesReducer = (previousState, instructions) => {
 			return stateEditable;
 
 		case "create":
-			console.log("TODO: Create note and add to state");
+			console.log("Create note and add to state");
 
 			let newNote = instructions.newNote;
 			stateEditable.push(newNote);
@@ -45,8 +45,21 @@ const notesReducer = (previousState, instructions) => {
 			return stateEditable; 
 			
 		case "update":
-			console.log("TODO: Update specific note and overwrite it in state");
-			break;
+			console.log("Update specific note and overwrite it in state");
+
+			// 1. Find the existing note
+			let targetNoteIndex = stateEditable.findIndex(globalSpecificNote => {
+				//console.log("Some note data");
+	
+				return globalSpecificNote.id === instructions.updatedNote.id;
+			})
+
+			// 2. Overwrite existing note 
+			stateEditable[targetNoteIndex] = instructions.updatedNote;
+
+
+			// 3. Return updated state array of notes
+			return stateEditable;
 		case "delete":
 			console.log("TODO: Delete note from state");
 			break;
