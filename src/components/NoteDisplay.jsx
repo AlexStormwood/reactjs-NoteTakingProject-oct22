@@ -3,7 +3,7 @@ import { useNoteData } from "../contexts/NotesContext";
 
 export default function NoteDisplay(props){
 
-	const {id} = props;
+	const {_id} = props;
 	const [localNote, setLocalNote] = useState({});
 
 	const globalNotesData = useNoteData();
@@ -18,7 +18,7 @@ export default function NoteDisplay(props){
 		setLocalNote(globalNotesData.find(globalSpecificNote => {
 			//console.log("Some note data");
 
-			return globalSpecificNote.id === id;
+			return globalSpecificNote._id === _id;
 		}));
 		
 		// Alternative, one-liner syntax:
@@ -26,7 +26,7 @@ export default function NoteDisplay(props){
 
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [globalNotesData, id])
+	}, [globalNotesData, _id])
 
 	
 
