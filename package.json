@@ -17,7 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "REACT_APP_DATABASE_URL=https://note-taking-backend-097194384ac8.herokuapp.com/ react-scripts start",
+    "start": "REACT_APP_DATABASE_URL=https://note-taking-backend-097194384ac8.herokuapp.com react-scripts start",
     "start-dev": "REACT_APP_DATABASE_URL=http://localhost:3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
