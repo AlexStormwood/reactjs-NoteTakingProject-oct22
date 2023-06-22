@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import NoteDisplay from "../components/NoteDisplay";
 import NoteForm from "../components/NoteForm";
 import NoteParent from "../components/NoteParent";
 import { useNoteData, useNoteDispatch } from "../contexts/NotesContext"
@@ -19,6 +18,7 @@ export default function Homepage(props){
 		// .then(response => response.json())
 		// .then(data => globalNotesDispatch({type:"setup", data: data})
 		// )
+	 // eslint-disable-next-line
 	},[])
 
 

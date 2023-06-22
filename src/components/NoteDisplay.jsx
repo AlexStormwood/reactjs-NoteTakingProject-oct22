@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNoteData } from "../contexts/NotesContext";
 
 export default function NoteDisplay(props){
