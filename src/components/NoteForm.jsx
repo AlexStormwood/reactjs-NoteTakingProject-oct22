@@ -12,6 +12,7 @@
 import { useEffect, useState } from "react";
 import { useNoteData, useNoteDispatch } from "../contexts/NotesContext";
 import Button  from "react-bootstrap/Button";
+import { createNote } from "../services/notesServices";
 
 export default function NoteForm(props){
 	
@@ -57,7 +58,8 @@ export default function NoteForm(props){
 		// We'd need to pass in the toggleEditMode stuff from the NoteParent 
 
 		let tempNewNote = {
-			id: id || globalNotesData.length + 1,
+			//id: id || globalNotesData.length + 1,
+			username: 'loreli',
 			title: localTitle,
 			description: localDescription,
 			isCompleted: localIsCompleted,
@@ -68,6 +70,7 @@ export default function NoteForm(props){
 		if (id){
 			globalNotesDispatch({type:"update", updatedNote: tempNewNote})
 		} else {
+			createNote(tempNewNote).then(data=> console.log(data))
 			globalNotesDispatch({type:"create", newNote: tempNewNote})
 		}
 		
